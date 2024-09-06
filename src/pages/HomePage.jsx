@@ -1,8 +1,12 @@
-
+import Banner from "../components/Banner/Banner";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 const Home = () => {
     return (
-        <div>
-            <h1>Home</h1>
+        <div className="homepage">
+            <Header />
+            <Banner />
+            <Footer />
         </div>
     );  
 };  
