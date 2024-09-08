@@ -1,12 +1,13 @@
 import FooterLogo from '../../assets/FooterLogo.png';
+import styles from './Footer.module.scss';
 const Footer = () => {
   return (
-    <footer className="footer" style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }} >
-      <div className="logo">
+    <footer className={styles.footer}>
+      <div className={styles.logo}>
         <img src={FooterLogo} alt="Footer Kasa" />
       </div>
       <div>
-        <p style={{ color: 'white' }}>© 2020 Kasa. All rights reserved</p>
+        <p>© 2020 Kasa. All rights reserved</p>
       </div>
     </footer>
   );
