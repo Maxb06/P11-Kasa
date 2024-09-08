@@ -1,9 +1,9 @@
-import banner from '../../assets/banner.png';
-const Banner = () => {
+import styles from "./Banner.module.scss";
+const Banner = ({img, text}) => {
   return ( 
-      <div className="logo">
-        <img src={banner} alt="Bannière du site" />
-        <p>Chez vous, partout et ailleurs</p>
+      <div className={styles.banner}>
+        <img src={img} alt="Bannière du site" />
+        <p>{text}</p>
       </div>
   );
 };
