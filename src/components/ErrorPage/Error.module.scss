@@ -1,0 +1,28 @@
+.errorPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    h1 {
+        color: #FF6060;
+        font-size: 288px;
+        font-weight: 700;
+        margin-top: 139px;
+    }
+
+    p {
+        color: #FF6060;
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    a {
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration-line: underline;
+        color: #000;
+        margin-bottom: 139px;
+    }
+}
