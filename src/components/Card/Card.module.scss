@@ -2,22 +2,22 @@
   position: relative;
   width: 340px;
   border-radius: 10px;
-}
 
-.cardImage {
-  width: 340px;
-  height: 340px;
-  border-radius: 10px;
-  object-fit: cover;
-}
+  .cardImage {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
 
-.cardTitle {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  bottom: 10%;
-  left: 5%;
-  position: absolute;
-  width: 300px;
-  color: #fff;
+  .cardTitle {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    bottom: 10%;
+    left: 5%;
+    position: absolute;
+    width: 300px;
+    color: #fff;
+  }
 }
