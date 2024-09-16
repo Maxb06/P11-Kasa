@@ -1,6 +1,4 @@
 import banner from "../assets/banner.png";
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
 import Banner from "../components/Banner/Banner";
 import Gallery from '../components/Gallery/Gallery';
 import React, { useEffect, useState } from 'react';
@@ -22,10 +20,8 @@ const [data, setData] = useState([]);
 
     return (
         <div>
-            <Header />
             <Banner img={banner} text="Chez vous, partout et ailleurs" />
             <Gallery data={data} />
-            <Footer />
         </div>
     );
 };
