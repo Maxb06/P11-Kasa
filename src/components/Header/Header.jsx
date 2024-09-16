@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/LOGO.png';
 import styles from './Header.module.scss';
+
+/**
+ * The header component, which contains the logo and a navigation menu with links to the homepage and the about page.
+ *
+ * @returns {JSX.Element} - A JSX element representing the header.
+ */
+
 const Header = () => {
   return (
     <header className={styles.header}>

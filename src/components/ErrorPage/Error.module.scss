@@ -1,3 +1,5 @@
+@use '../../variables.scss';
+
 .errorPage {
     display: flex;
     flex-direction: column;
@@ -5,20 +7,20 @@
     align-items: center;
     gap: 100px;
 
-    h1 {
-        color: #FF6060;
+    .title {
+        color: variables.$red-color;
         font-size: 288px;
         font-weight: 700;
         margin-top: 139px;
     }
 
-    p {
-        color: #FF6060;
+    .text {
+        color: variables.$red-color;
         font-size: 36px;
         font-weight: 500;
     }
 
-    a {
+    .link {
         font-size: 18px;
         font-weight: 500;
         text-decoration-line: underline;

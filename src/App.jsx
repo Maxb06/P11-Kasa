@@ -1,6 +1,7 @@
 import React from 'react';
-import AppRouter from './Router';
+import AppRouter from './router';
 import './global.scss';
+
 function App() {
   return (
     <div className="App">

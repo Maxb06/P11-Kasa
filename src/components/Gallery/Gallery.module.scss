@@ -1,11 +1,20 @@
+@use '../../variables.scss';
+
 .gallery {
     border-radius: 25px;
-    background: #F6F6F6;
+    background-color: variables.$grey-color;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
     margin-bottom: 50px; 
-    padding: 56px 50px 43px 50px;
+    padding: 56px 43px;
     gap: 60px 50px;
+
+    @media (max-width: variables.$breakpoint-m) {
+        padding: 0;
+        background-color: transparent;
+        margin: 30px 20px;
+        grid-template-columns: 1fr;
+    }
 }
   

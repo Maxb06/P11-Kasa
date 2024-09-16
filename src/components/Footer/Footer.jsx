@@ -1,5 +1,14 @@
 import FooterLogo from '../../assets/FooterLogo.png';
 import styles from './Footer.module.scss';
+
+/**
+ * Footer component
+ * 
+ * This component renders the footer of the page, 
+ * with the logo and the copyright
+ * 
+ * @returns {JSX.Element} The footer element
+ */
 const Footer = () => {
   return (
     <footer className={styles.footer}>

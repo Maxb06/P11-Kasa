@@ -1,10 +1,21 @@
+import { Link } from 'react-router-dom';
 import styles from './Card.module.scss';
 
-const Card = ({ title, cover }) => {
+/**
+ * A Card component that renders a clickable card with the given image and title.
+ *
+ * @param {{cover: string, title: string}} card - An object with the image source and title of the card.
+ * @returns {JSX.Element} - A JSX element representing the card.
+ */
+const Card = ({ card }) => {
   return (
-    <article className={styles.card}>
-      <img src={cover} alt={title} className={styles.cardImage} />
-      <h3 className={styles.cardTitle}>{title}</h3>
+    <article>
+      <Link to="rent/:id">
+        <div className={styles.card}>
+          <img src={card.cover} alt='' className={styles.cardImage} />
+          <p className={styles.cardTitle}>{card.title}</p>
+        </div>
+      </Link>
     </article>
   );
 };

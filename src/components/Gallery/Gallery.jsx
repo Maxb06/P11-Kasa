@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { fetchData } from '../../api/api';
 import Card from '../Card/Card';
 import styles from './Gallery.module.scss';
 
-const Gallery = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetchData().then((data) => setData(data));
-  }, []);
-
+/**
+ * This component renders a list of rent cards, it is used
+ * in the HomePage component. It takes a list of rent objects
+ * as a prop and renders a Card component for each one.
+ *
+ * @param {Array} data - An array of rent objects
+ * @returns {JSX} A JSX element representing a list of rent cards
+ */
+const Gallery = ({data}) => {
   return (
-    <section className={styles.gallery}>
-      {data.map((logement) => (
-        <Card key={logement.id} title={logement.title} cover={logement.cover} />
-      ))}
-    </section>
+    <main>
+      <section className={styles.gallery}>
+        {data.map((rent, index) => {
+          return <Card key={`${index}-${rent.id}`} card={rent} />;
+        })}
+      </section>  
+    </main>
   );
 };
 
