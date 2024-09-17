@@ -1,0 +1,56 @@
+@use '../../variables.scss';
+
+@mixin content {
+    background-color: variables.$grey-color;
+    margin-top: -5px;
+    transition: all 0.2s;
+    padding: 15px 30px;
+    width: 100%;
+
+    @media (max-width: variables.$breakpoint-m) {
+        font-size: 14px;
+    }
+}
+
+.container {
+    margin-bottom: 20px;
+    width: 90%;
+    position: relative;
+
+    @media (max-width: variables.$breakpoint-m) {
+        width: 100%;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        background-color: variables.$red-color;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 5px;
+        font-size: 18px;
+
+        @media (max-width: variables.$breakpoint-m) {
+            font-size: 16px;
+        }
+
+        &__icon {
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.4s;
+        }
+    }
+
+    &__content {
+        @include content;
+    }
+}
+
+.contentUl {
+    @include content;
+    list-style-type: none;
+
+    &__contentLi {
+        padding-bottom: 10px;
+    }
+}
