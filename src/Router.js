@@ -7,6 +7,13 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 
+/**
+ * This component renders the router for the whole application.
+ * It renders a header, a routes component with four routes (for home, rent, about and not found pages),
+ * and a footer.
+ *
+ * @returns {JSX.Element} - The router element.
+ */
 const AppRouter = () => {
   return (
     <Router>

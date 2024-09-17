@@ -1,6 +1,12 @@
 import styles from './Error.module.scss';
 import { Link } from 'react-router-dom';
 
+/**
+ * This component renders an error message with a link to redirect the user to the homepage,
+ * in case the user has entered an invalid URL.
+ * 
+ * @returns {JSX.Element} - A JSX element representing the error page.
+ */
 const Error = () => {
     return (
         <main className={styles.errorPage}>
