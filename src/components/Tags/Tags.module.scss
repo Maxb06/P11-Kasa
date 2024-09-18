@@ -1,0 +1,15 @@
+@use '../../variables.scss';
+
+.tag {
+    background-color: variables.$red-color;
+    color: white;
+    padding: 5px 25px;
+    margin-right: 10px;
+    border-radius: 10px;
+
+    @media (max-width: variables.$breakpoint-m) {
+        font-size: 10px;
+        padding: 5px 9px;
+        margin-right: 7px;
+    }
+}
