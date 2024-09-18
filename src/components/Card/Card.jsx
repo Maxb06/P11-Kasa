@@ -10,7 +10,7 @@ import styles from './Card.module.scss';
 const Card = ({ card }) => {
   return (
     <article>
-      <Link to="rent/:id">
+      <Link to={`/rent/${card.id}`}>
         <div className={styles.card}>
           <img src={card.cover} alt='' className={styles.cardImage} />
           <p className={styles.cardTitle}>{card.title}</p>

@@ -1,23 +1,47 @@
+@use '../../variables.scss';
+
 .card {
   position: relative;
-  width: 340px;
+  width: 100%;
+  max-width: 340px;
   border-radius: 10px;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: linear-gradient(transparent, rgba(4, 4, 4, 0.5));
+    z-index: 1;
+
+    @media (max-width: variables.$breakpoint-m) {
+      height: 255px;
+    }
+  }
 
   .cardImage {
-    width: 340px;
+    width: 100%;
     height: 340px;
     border-radius: 10px;
     object-fit: cover;
+
+    @media (max-width: variables.$breakpoint-m) {
+      height: 255px;
+    }
   }
 
   .cardTitle {
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
-    bottom: 10%;
-    left: 5%;
     position: absolute;
-    width: 300px;
+    bottom: 20px;
+    left: 20px;
     color: #fff;
+    z-index: 2;
   }
 }
