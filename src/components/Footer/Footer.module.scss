@@ -1,3 +1,5 @@
+@use '../../variables.scss';
+
 .footer {
     background-color: black;
     display: flex;
@@ -14,5 +16,9 @@
         color: white;
         font-size: 24px;
         font-weight: 500;
+
+        @media (max-width: variables.$breakpoint-m) {
+            font-size: 14px;
+        }
     }
 }
