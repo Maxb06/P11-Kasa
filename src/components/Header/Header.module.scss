@@ -1,10 +1,31 @@
+@use '../../variables.scss';
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 45px;
     margin-bottom: 50px;
+    padding: 0 20px;
 
+    @media (max-width: variables.$breakpoint-m) {
+        padding: 10px 15px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+.logo {
+    img {
+        height: 68px;
+        width: 210px;
+        object-fit: contain;
+
+        @media (max-width: variables.$breakpoint-m) {
+            width: 120px;
+            height: 45px;
+        }
+    }
 }
 
 .nav {
@@ -13,13 +34,26 @@
         list-style: none;
         gap: 57px;
 
+        @media (max-width: variables.$breakpoint-m) {
+            gap: 20px;
+        }
+
         li {
             font-size: 24px;
             font-weight: 500;
+
+            @media (max-width: variables.$breakpoint-m) {
+                font-size: 16px;
+            }
         }
 
         a {
             text-decoration: none;
+            color: black;
+
+            &:hover {
+                color: lighten(black, 30%);
+            }
         }
     }
 }

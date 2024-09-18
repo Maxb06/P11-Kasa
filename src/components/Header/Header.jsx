@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/LOGO.png';
 import styles from './Header.module.scss';
 
@@ -7,8 +7,9 @@ import styles from './Header.module.scss';
  *
  * @returns {JSX.Element} - A JSX element representing the header.
  */
-
 const Header = () => {
+  const location = useLocation();
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -17,10 +18,24 @@ const Header = () => {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <Link to="/">Accueil</Link>
+            <Link
+              to="/"
+              style={{
+                textDecoration: location.pathname === '/' ? 'underline' : 'none',
+              }}
+            >
+              Accueil
+            </Link>
           </li>
           <li>
-            <Link to="/about">À Propos</Link>
+            <Link
+              to="/about"
+              style={{
+                textDecoration: location.pathname === '/about' ? 'underline' : 'none',
+              }}
+            >
+              À Propos
+            </Link>
           </li>
         </ul>
       </nav>
