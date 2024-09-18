@@ -1,0 +1,43 @@
+@use '../../variables.scss';
+
+.main {
+    padding: 0 45px 45px;
+
+    @media (max-width: variables.$breakpoint-m) {
+        padding: 0 20px 45px;
+    }
+
+    &__dropdown {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+
+        & > li:first-child {
+            margin-right: 20px;
+        }
+
+        & > li > ul, & > li > p {
+            height: 150px;
+            overflow-y: hidden;
+
+            &:hover {
+                overflow-y: auto;
+            }
+        }
+
+        @media (max-width: variables.$breakpoint-m) {
+            flex-direction: column;
+        }
+    }
+}
+
+.containerInfo {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: variables.$breakpoint-m) {
+        flex-direction: column;
+    }
+}
