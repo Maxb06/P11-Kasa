@@ -10,11 +10,17 @@
     padding: 56px 43px;
     gap: 60px 50px;
 
+    @media (max-width: variables.$breakpoint-xl) {
+        justify-content: space-evenly;
+        grid-template-columns: 1fr 1fr;
+    }
+
     @media (max-width: variables.$breakpoint-m) {
         padding: 0;
         background-color: transparent;
         margin: 30px 20px;
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
   
