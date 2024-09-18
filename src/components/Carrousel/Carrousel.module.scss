@@ -17,17 +17,12 @@
     & .previousButton,
     & .nextButton {
         color: white;
-        font-size: 72px;
         position: absolute;
         cursor: pointer;
         top: 50%;
         transform: translateY(-50%);
         background-color: transparent;
         border: none;
-
-        @media (max-width: variables.$breakpoint-m) {
-            font-size: 24px;
-        }
     }
 
     & .previousButton {
@@ -36,5 +31,14 @@
 
     & .nextButton {
         right: 2%;
+    }
+}
+
+@media (max-width: variables.$breakpoint-m) {
+
+    .previousButton img,
+    .nextButton img {
+        width: 24px;
+        height: auto;
     }
 }
