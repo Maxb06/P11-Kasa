@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from "./Banner.module.scss";
 
 /**
@@ -16,5 +17,10 @@ const Banner = ({img, text}) => {
       </div>
   );
 };
+
+Banner.propTypes = {
+  img: PropTypes.string.isRequired,
+  text: PropTypes.string,
+}
 
 export default Banner;

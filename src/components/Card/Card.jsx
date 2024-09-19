@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './Card.module.scss';
 
@@ -18,6 +19,14 @@ const Card = ({ card }) => {
       </Link>
     </article>
   );
+};
+
+Card.propTypes = {
+  card: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Card;

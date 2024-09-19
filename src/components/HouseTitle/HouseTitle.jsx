@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Tags from '../Tags/Tags';
 import styles from './HouseTitle.module.scss';
 
@@ -18,6 +19,12 @@ const RentTitle = ({title, location, tags}) => {
       </ul>
     </div>
   );
+};
+
+RentTitle.propTypes = {
+  title: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default RentTitle;

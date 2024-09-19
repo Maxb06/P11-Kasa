@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Collapse from '../Collapse/Collapse';
 import styles from './styles.module.scss';
 
@@ -16,6 +17,18 @@ const AboutSection = ({ settling }) => {
       </ul>
     </main>
   );
+};
+
+AboutSection.propTypes = {
+  settling: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string),
+      ]).isRequired,
+    })
+  ).isRequired,
 };
 
 export default AboutSection;

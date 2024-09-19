@@ -21,11 +21,11 @@ const Carrousel = ({ pictures, title }) => {
    * will wrap around to the beginning of the array.
    */
   const increaseIndex = () => {
-    setIndexImage((prevIndex) => (prevIndex + 1) % pictures.length);
+    setIndexImage((index) => (index + 1) % pictures.length);
   };
 
   const decreaseIndex = () => {
-    setIndexImage((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length);
+    setIndexImage((index) => (index - 1 + pictures.length) % pictures.length);
   };
 
   return (

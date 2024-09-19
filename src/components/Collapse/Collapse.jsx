@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import styles from './Collapse.module.scss';
 import arrowUp from '../../assets/arrow_up.png';
@@ -50,6 +51,16 @@ const Collapse = ({ object }) => {
       </div>
     </li>
   );
+};
+
+Collapse.propTypes = {
+  object: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    content: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string),
+    ]).isRequired,
+  }).isRequired,
 };
 
 export default Collapse;

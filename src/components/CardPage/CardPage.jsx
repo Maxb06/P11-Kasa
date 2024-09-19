@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Carrousel from '../Carrousel/Carrousel';
 import Collapse from '../Collapse/Collapse';
 import Owner from '../Owner/Owner';
@@ -29,6 +30,22 @@ const CardPage = ({ house }) => {
       </ul>
     </main>
   );
+};
+
+CardPage.propTypes = {
+  house: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+    host: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      picture: PropTypes.string.isRequired,
+    }).isRequired,
+    equipments: PropTypes.arrayOf(PropTypes.string).isRequired,
+    location: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    rating: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
 };
 
 export default CardPage;

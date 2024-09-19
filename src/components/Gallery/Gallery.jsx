@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Card from '../Card/Card';
 import styles from './Gallery.module.scss';
 
@@ -21,4 +22,15 @@ const Gallery = ({data}) => {
   );
 };
 
+Gallery.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      cover: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
+
 export default Gallery;
+

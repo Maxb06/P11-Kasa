@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './Owner.module.scss';
 
 /**
@@ -52,6 +53,14 @@ const Owner = ({ host, rating }) => {
       </div>
     </div>
   );
+};
+
+Owner.propTypes = {
+  host: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,
+  }).isRequired,
+  rating: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 export default Owner;
