@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import styles from './Collapse.module.scss';
-import arrowUp from '../../assets/arrow_up.png';
-import arrowDown from '../../assets/arrow_down.png';
+import arrow from '../../assets/arrow_down.png'; // Chemin vers l'image du chevron
 
 /**
  * Component Collapse, qui permet de gérer l'ouverture et la fermeture 
@@ -31,9 +30,9 @@ const Collapse = ({ object }) => {
       <h3 className={styles.container__title} onClick={toggleCollapse}>
         {object.title}
         <img
-          src={isOpen ? arrowUp : arrowDown}
+          src={arrow}
           alt="Toggle collapse"
-          className={styles.chevron}
+          className={`${styles.chevron} ${isOpen ? styles['rotate-0'] : styles['rotate-90']} ${!isOpen ? styles['rotate-180'] : ''}`} 
         />
       </h3>
       <div style={styleContent}>

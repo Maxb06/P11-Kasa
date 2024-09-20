@@ -1,17 +1,5 @@
 @use '../../variables.scss';
 
-@mixin content {
-    background-color: variables.$grey-color;
-    margin-top: -5px;
-    transition: all 0.2s;
-    padding: 15px 30px;
-    width: 100%;
-
-    @media (max-width: variables.$breakpoint-m) {
-        font-size: 14px;
-    }
-}
-
 .container {
     margin-bottom: 20px;
     width: 90%;
@@ -35,16 +23,50 @@
         }
     }
 
-    &__content {
-        @include content;
+    .chevron {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+
+        &.rotate-0 {
+            transform: rotate(0deg);
+        }
+
+        &.rotate-90 {
+            transform: rotate(90deg);
+        }
+
+        &.rotate-180 {
+            transform: rotate(180deg);
+        }
     }
-}
 
-.contentUl {
-    @include content;
-    list-style-type: none;
+    &__content {
+        background-color: variables.$grey-color;
+        margin-top: -5px;
+        transition: all 0.2s;
+        padding: 15px 30px;
+        width: 100%;
 
-    &__contentLi {
-        padding-bottom: 10px;
+        @media (max-width: variables.$breakpoint-m) {
+            font-size: 14px;
+        }
+    }
+
+    .contentUl {
+        background-color: variables.$grey-color;
+        margin-top: -5px;
+        transition: all 0.2s;
+        padding: 15px 30px;
+        width: 100%;
+        list-style-type: none;
+
+        @media (max-width: variables.$breakpoint-m) {
+            font-size: 14px;
+        }
+
+        &__contentLi {
+            padding-bottom: 10px;
+        }
     }
 }
