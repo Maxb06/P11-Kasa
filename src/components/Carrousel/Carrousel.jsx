@@ -33,6 +33,7 @@ const Carrousel = ({ pictures, title }) => {
       <img src={pictures[indexImage]} alt={title} className={styles.containerImg__img} />
       {pictures.length > 1 && (
         <>
+        <span className={styles.containerImg__span}>{indexImage + 1}/{pictures.length}</span>
           <button onClick={decreaseIndex} className={styles.previousButton}>
             <img src={previous} alt="Previous" />
           </button>
