@@ -1,19 +1,26 @@
 import PropTypes from 'prop-types';
+import { useLocation } from 'react-router-dom';
 import styles from "./Banner.module.scss";
 
 /**
- * React component to display a banner with an image and a text.
- * The banner is a div with a class of "banner" containing an img and a h1.
- * The img is given the class "img" and the src and alt attributes are set to the given img.
- * The h1 is given the class "text" and its content is set to the given text.
+ * React component to display a banner with an image and a dynamic background.
+ * The banner displays an image and optional text. The background opacity
+ * changes based on the current page.
+ * 
  * @param {{img: string, text: string}} props - The props for the component.
  * @returns {React.ReactElement} - The React element for the component.
  */
-const Banner = ({img, text}) => {
+const Banner = ({ img, text }) => {
+  const location = useLocation();
+
+  const backgroundStyle = {
+    background: location.pathname === '/' ? 'rgba(0, 0, 0, 0.6)' : 'rgba(0, 0, 0, 0.3)',
+  };
+
   return ( 
-      <div className={styles.banner}>
+      <div className={styles.container} style={backgroundStyle}>
         <img className={styles.img} src={img} alt="Bannière du site" />
-        <h1 className={styles.text}>{text}</h1>
+        {text && <h1 className={styles.text}>{text}</h1>}
       </div>
   );
 };
@@ -21,6 +28,6 @@ const Banner = ({img, text}) => {
 Banner.propTypes = {
   img: PropTypes.string.isRequired,
   text: PropTypes.string,
-}
+};
 
 export default Banner;
