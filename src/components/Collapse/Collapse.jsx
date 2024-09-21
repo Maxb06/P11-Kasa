@@ -4,15 +4,18 @@ import styles from './Collapse.module.scss';
 import arrow from '../../assets/arrow_down.png';
 
 /**
- * Component Collapse, qui permet de gérer l'ouverture et la fermeture 
- * d'un élément, avec un contenu enfant dynamique.
+ * Component Collapse, to manage the opening and closing 
+ * of an element, with dynamic child content.
  * 
- * @param {{title: string, children: React.ReactNode}} props - Les props du composant Collapse.
- * @returns {JSX.Element} Un élément JSX qui représente le Collapse.
+ * @param {{title: string, children: React.ReactNode}} props - Collapse component props.
+ * @returns {JSX.Element} A JSX element representing Collapse.
  */
 const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  /**
+   * Toggle the isOpen state to open or close the Collapse component.
+   */ 
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
   };
