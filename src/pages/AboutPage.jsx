@@ -16,8 +16,18 @@ const About = () => {
             <Banner img={banner} />
             <main className={styles.container}>
                 <ul className={styles.container__content}>
-                    {aboutList.map((rule, index) => (
-                        <Collapse key={`${index}-${rule.title}`} object={rule} />
+                    {aboutList.map((data, index) => (
+                        <Collapse key={`${index}-${data.title}`} title={data.title}>
+                            {typeof data.content === 'string' ? (
+                                <p>{data.content}</p>
+                            ) : (
+                                <ul>
+                                    {data.content.map((item, idx) => (
+                                        <li key={idx}>{item}</li>
+                                    ))}
+                                </ul>
+                            )}
+                        </Collapse>
                     ))}
                 </ul>
             </main>

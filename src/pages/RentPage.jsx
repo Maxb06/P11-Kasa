@@ -46,8 +46,16 @@ const Rent = () => {
         <Owner host={host} rating={rating} />
       </section>
       <ul className={styles.main__dropdown}>
-        <Collapse object={{ title: 'Description', content: description }} />
-        <Collapse object={{ title: 'Équipements', content: equipments }} />
+        <Collapse title="Description">
+          <p>{description}</p>
+        </Collapse>
+        <Collapse title="Équipements">
+          <ul>
+            {equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
       </ul>
     </main>
   );

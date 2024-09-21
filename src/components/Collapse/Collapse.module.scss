@@ -1,18 +1,18 @@
 @use '../../variables.scss';
 
 .container {
-    margin-bottom: 20px;
-    width: 90%;
     position: relative;
+    width: 90%;
+    margin-bottom: 30px;
 
     @media (max-width: variables.$breakpoint-m) {
         width: 100%;
     }
 
     &__title {
+        background-color: variables.$red-color;
         display: flex;
         justify-content: space-between;
-        background-color: variables.$red-color;
         color: white;
         padding: 15px 30px;
         border-radius: 5px;
@@ -27,6 +27,7 @@
         width: 24px;
         height: 24px;
         transition: transform 0.3s ease;
+        cursor: pointer;
 
         &.rotate-0 {
             transform: rotate(0deg);
@@ -47,26 +48,14 @@
         transition: all 0.2s;
         padding: 15px 30px;
         width: 100%;
-
-        @media (max-width: variables.$breakpoint-m) {
-            font-size: 14px;
-        }
-    }
-
-    .contentUl {
-        background-color: variables.$grey-color;
-        margin-top: -5px;
-        transition: all 0.2s;
-        padding: 15px 30px;
-        width: 100%;
-        list-style-type: none;
+        line-height: 142.6%;
 
         @media (max-width: variables.$breakpoint-m) {
             font-size: 14px;
         }
 
-        &__contentLi {
-            padding-bottom: 10px;
+        ul {
+            list-style: none;
         }
-    }
+    } 
 }
