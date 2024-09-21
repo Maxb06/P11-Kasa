@@ -9,14 +9,14 @@
 
   &::before {
     content: '';
+    background: linear-gradient(transparent, rgba(4, 4, 4, 0.5));
+    z-index: 1;
     position: absolute;
     height: 99%;
     width: 100%;
     top: 0;
     left: 0;
     border-radius: 10px;
-    background: linear-gradient(transparent, rgba(4, 4, 4, 0.5));
-    z-index: 1;
 
     @media (max-width: variables.$breakpoint-m) {
       height: 255px;
@@ -35,13 +35,13 @@
   }
 
   .cardTitle {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
     position: absolute;
     bottom: 20px;
     left: 20px;
-    color: #fff;
     z-index: 2;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
   }
 }

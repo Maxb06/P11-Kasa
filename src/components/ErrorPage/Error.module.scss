@@ -7,17 +7,32 @@
     align-items: center;
     gap: 100px;
 
+    @media (max-width: variables.$breakpoint-m) {
+        gap: 113px;
+        text-align: center;
+    }
+
     .title {
         color: variables.$red-color;
         font-size: 288px;
         font-weight: 700;
         margin-top: 139px;
+
+        @media (max-width: variables.$breakpoint-m) {
+            margin-top: 80px;
+            font-size: 90px;
+        }
     }
 
     .text {
         color: variables.$red-color;
         font-size: 36px;
         font-weight: 500;
+
+        @media (max-width: variables.$breakpoint-m) {
+            font-size: 22px;
+            text-align: center;
+        }
     }
 
     .link {
@@ -26,5 +41,9 @@
         text-decoration-line: underline;
         color: #000;
         margin-bottom: 139px;
+
+        @media (max-width: variables.$breakpoint-m) {
+            margin-bottom: 113px;
+        }
     }
 }

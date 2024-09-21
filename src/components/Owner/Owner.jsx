@@ -28,8 +28,8 @@ const Owner = ({ host, rating }) => {
         <svg
           key={i}
           xmlns="http://www.w3.org/2000/svg"
-          width="14"
-          height="14"
+          width="24"
+          height="24"
           viewBox="0 0 14 14"
           fill={i <= score ? '#FF6060' : '#E3E3E3'}
           className={styles.star} 
