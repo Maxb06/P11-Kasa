@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/LOGO.png';
 import styles from './Header.module.scss';
 
@@ -8,8 +8,6 @@ import styles from './Header.module.scss';
  * @returns {JSX.Element} - A JSX element representing the header.
  */
 const Header = () => {
-  const location = useLocation();
-
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -18,24 +16,24 @@ const Header = () => {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <Link
+            <NavLink
               to="/"
-              style={{
-                textDecoration: location.pathname === '/' ? 'underline' : 'none',
-              }}
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : undefined
+              }
             >
               Accueil
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/about"
-              style={{
-                textDecoration: location.pathname === '/about' ? 'underline' : 'none',
-              }}
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : undefined
+              }
             >
               À Propos
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
