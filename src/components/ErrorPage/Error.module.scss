@@ -5,21 +5,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 139px;
+    padding: 0 100px 0 100px;
 
     @media (max-width: variables.$breakpoint-m) {
         gap: 113px;
         text-align: center;
+        padding: 0;
     }
 
     .title {
         color: variables.$red-color;
         font-size: 288px;
         font-weight: 700;
-        margin-top: 139px;
+        margin-top: 119px;
 
         @media (max-width: variables.$breakpoint-m) {
-            margin-top: 80px;
+            margin-top: 100px;
             font-size: 90px;
         }
     }
@@ -32,6 +34,7 @@
         @media (max-width: variables.$breakpoint-m) {
             font-size: 22px;
             text-align: center;
+            line-height: 142.6%;
         }
     }
 

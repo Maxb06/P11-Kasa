@@ -9,6 +9,9 @@
 
     @media (max-width: variables.$breakpoint-m) {
         width: 100%;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
     }
 
     &__title {
@@ -31,7 +34,13 @@
 
     ul {
         display: flex;
-        margin: 20px 0;
         list-style: none;
+        margin-top: 20px;
+        margin-bottom: 24px;
+
+        @media (max-width: variables.$breakpoint-m) {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
     }
 }

@@ -18,7 +18,7 @@ const Banner = ({ img, text }) => {
   };
 
   return ( 
-      <div className={styles.container} style={backgroundStyle}>
+      <div className={styles.banner} style={backgroundStyle}>
         <img className={styles.img} src={img} alt="Bannière du site" />
         {text && <h1 className={styles.text}>{text}</h1>}
       </div>

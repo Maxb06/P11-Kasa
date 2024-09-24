@@ -7,8 +7,8 @@
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
     margin-bottom: 50px; 
-    padding: 56px 100px;
-    gap: 60px 30px;
+    padding: 56px 50px 43px 50px;
+    gap: 40px 60px;
 
     @media (max-width: variables.$breakpoint-xl) {
         grid-template-columns: 1fr 1fr;
@@ -18,9 +18,9 @@
     @media (max-width: variables.$breakpoint-m) {
         grid-template-columns: 1fr;
         background-color: transparent;
-        gap: 30px;
+        gap: 18px;
         padding: 0;
-        margin: 30px 20px;
+        margin-bottom: 25px;
     }
 }
   

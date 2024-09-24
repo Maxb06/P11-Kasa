@@ -2,7 +2,7 @@
 
 .container {
     position: relative;
-    width: 90%;
+    width: 86%;
     margin-bottom: 30px;
 
     @media (max-width: variables.$breakpoint-m) {
@@ -13,13 +13,16 @@
         background-color: variables.$red-color;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         color: white;
-        padding: 15px 30px;
-        border-radius: 5px;
+        padding: 15px 20px 15px 15px;
+        border-radius: 10px;
         font-size: 18px;
 
         @media (max-width: variables.$breakpoint-m) {
             font-size: 16px;
+            padding: 15px 15px 15px 10px;
+            align-items: center;
         }
     }
 
@@ -44,7 +47,7 @@
 
     &__content {
         background-color: variables.$grey-color;
-        margin-top: -5px;
+        border-radius: 5px;
         transition: all 0.2s;
         padding: 15px 30px;
         width: 100%;

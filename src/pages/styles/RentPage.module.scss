@@ -1,10 +1,21 @@
 @use '../../variables.scss';
 
 .main {
-    padding: 0 45px 45px;
+    padding: 0 100px;
 
     @media (max-width: variables.$breakpoint-m) {
-        padding: 0 20px 45px;
+        padding: 27px 20px 0 20px;
+    }
+
+    .containerInfo {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    
+        @media (max-width: variables.$breakpoint-m) {
+            flex-direction: column;
+            margin-top: 13px;
+        }
     }
 
     &__dropdown {
@@ -12,33 +23,16 @@
         display: flex;
         justify-content: space-between;
         margin-top: 15px;
+        margin-bottom: 20px;
 
         & > li:first-child {
-            margin-right: 20px;
-        }
-
-        & > li > ul, & > li > p {
-            height: 150px;
-            overflow-y: hidden;
-
-            &:hover {
-                overflow-y: auto;
-            }
+            margin-right: 75px;
         }
 
         @media (max-width: variables.$breakpoint-m) {
             flex-direction: column;
+            margin-bottom: 5px;
         }
-    }
-}
-
-.containerInfo {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-
-    @media (max-width: variables.$breakpoint-m) {
-        flex-direction: column;
     }
 }
 
@@ -51,3 +45,4 @@
     align-items: center;
     height: 50vh;
 }
+

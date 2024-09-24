@@ -3,6 +3,7 @@ import Banner from "../components/Banner/Banner";
 import Gallery from '../components/Gallery/Gallery';
 import React, { useEffect, useState } from 'react';
 import { fetchData } from '../api/api'; 
+import styles from './styles/HomePage.module.scss';
 
 /**
  * React component to display the home page.
@@ -19,7 +20,7 @@ const [data, setData] = useState([]);
   }, []);
 
     return (
-        <div>
+        <div className={styles.container}>
             <Banner img={banner} text="Chez vous, partout et ailleurs" />
             <Gallery data={data} />
         </div>

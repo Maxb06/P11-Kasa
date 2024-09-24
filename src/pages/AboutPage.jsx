@@ -2,7 +2,7 @@ import banner from "../assets/aboutBanner.png";
 import Banner from "../components/Banner/Banner";
 import aboutList from "../data/aboutList";
 import Collapse from '../components/Collapse/Collapse';
-import styles from './styles/AboutPage.module.scss'; 
+import styles from './styles/AboutPage.module.scss';
 
 /**
  * Returns a JSX element representing the about page.
@@ -13,8 +13,8 @@ import styles from './styles/AboutPage.module.scss';
 const About = () => {
     return (
         <div>
-            <Banner img={banner} />
             <main className={styles.container}>
+                <Banner img={banner} className={styles.banner} />
                 <ul className={styles.container__content}>
                     {aboutList.map((data, index) => (
                         <Collapse key={`${index}-${data.title}`} title={data.title}>

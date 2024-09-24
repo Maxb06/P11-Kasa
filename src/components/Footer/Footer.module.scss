@@ -8,17 +8,28 @@
     height: 209px;
     gap: 28.5px;
 
+    @media (max-width: variables.$breakpoint-m) {
+        gap: 13px;
+    }
+
     .logo {
         margin-top: 66px;
     }
 
-    p {
-        color: white;
-        font-size: 24px;
-        font-weight: 500;
+    .copyright {
+        display: flex;
+        justify-content: center;
 
-        @media (max-width: variables.$breakpoint-m) {
-            font-size: 14px;
+        p {
+            color: white;
+            font-size: 24px;
+            font-weight: 500;
+
+            @media (max-width: variables.$breakpoint-m) {
+                font-size: 12px;
+                width: 55%;
+                text-align: center;
+            }
         }
     }
 }

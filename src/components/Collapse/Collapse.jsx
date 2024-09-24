@@ -23,7 +23,7 @@ const Collapse = ({ title, children }) => {
   const styleContent = {
     maxHeight: isOpen ? '500px' : '0', 
     opacity: isOpen ? '1' : '0',
-    transition: 'all 0.3s ease',
+    transition: 'all 0.5s ease',
     overflow: 'hidden', 
   };
 

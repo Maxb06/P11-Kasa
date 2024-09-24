@@ -15,7 +15,7 @@ const Footer = () => {
       <div className={styles.logo}>
         <img src={FooterLogo} alt="Footer Kasa" />
       </div>
-      <div>
+      <div className={styles.copyright}>
         <p>© 2020 Kasa. All rights reserved</p>
       </div>
     </footer>

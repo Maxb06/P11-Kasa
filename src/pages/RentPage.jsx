@@ -50,7 +50,7 @@ const Rent = () => {
           <p>{description}</p>
         </Collapse>
         <Collapse title="Équipements">
-          <ul>
+          <ul className={styles.list}>
             {equipments.map((equipment, index) => (
               <li key={index}>{equipment}</li>
             ))}
