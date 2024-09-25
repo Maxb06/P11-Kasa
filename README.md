@@ -32,14 +32,13 @@ Structure du projet
 
 Le projet suit une structure organisée par composants et pages, avec un fichier data.json pour la simulation des données dynamiques.
 /src
-│
-├── /assets       # Contient les images (logo, bannières, etc.)
-├── /components   # Composants réutilisables (Collapse, Carrousel, Owner, etc.)
-├── /pages        # Différentes pages de l'application (Home, Rent, About)
-├── /styles       # Fichiers SCSS globaux et modules spécifiques
-├── /api          # Gestion des appels de données (fetch)
-├── /data         # Fichier data.json simulant les données des logements
-└── App.jsx       # Point d'entrée de l'application
+- /assets       # Contient les images (logo, bannières, etc.)
+- /components   # Composants réutilisables (Collapse, Carrousel, Owner, etc.)
+- /pages        # Différentes pages de l'application (Home, Rent, About)
+- /styles       # Fichiers SCSS globaux et modules spécifiques
+- /api          # Gestion des appels de données (fetch)
+- /data         # Fichier data.json simulant les données des logements
+- /App.jsx      # Point d'entrée de l'application
 
 Technologies utilisées
 
