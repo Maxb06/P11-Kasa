@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+Kasa - Application de location d'appartements
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projet 11 de la formation OpenClassrooms - Développeur d'Application JavaScript / React
 
-## Available Scripts
+Présentation 
 
-In the project directory, you can run:
+Kasa est une plateforme de location d'appartements entre particuliers, active depuis près de 10 ans. Avec plus de 500 nouvelles annonces publiées chaque jour, Kasa est un acteur majeur dans le domaine de la location immobilière en France.
 
-### `npm start`
+Ce projet consiste à développer l'application web de Kasa en utilisant React pour la gestion de l'interface utilisateur et React Router pour la gestion des routes. Le projet est structuré de manière modulaire et utilise des composants réutilisables pour assurer la flexibilité et l'extensibilité du code.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Objectifs
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Découper l'interface en composants modulaires et réutilisables
+- Gérer les routes de l'application avec React Router
+- Utiliser fetch pour récupérer les données depuis un fichier data.json
+- Mettre en place une gestion des props et du state dans les composants
+- Utiliser PropTypes pour la validation et la sécurisation des props
+- Implémenter une gestion des erreurs (404) lors d'un ID incorrect dans l'URL
+- Assurer une compatibilité responsive avec une version desktop et mobile fidèle à la maquette
+- Utiliser JSDoc pour documenter les composants et faciliter la maintenance
 
-### `npm test`
+Fonctionnalités
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Page d'accueil : Présente une bannière avec une phrase d'accroche dynamique, ainsi qu'une galerie de cartes représentant les logements disponibles.
+- Page "À Propos" : Décrit les valeurs de l'entreprise à travers des sections interactives sous forme de collapses réutilisables.
+- Page de logement : Affiche les détails d'un logement spécifique avec un carrousel d'images, des informations sur le propriétaire, les équipements disponibles, et une description détaillée.
+- Gestion des erreurs : Redirection automatique vers une page 404 en cas d'ID incorrect ou inexistant dans l'URL.
+- Composants réutilisables : utilisés sur plusieurs pages pour garantir la modularité et la cohérence de l'interface.
+- Responsive design : L'application est entièrement responsive, avec un affichage optimisé pour les appareils mobiles, tablettes et ordinateurs de bureau.
 
-### `npm run build`
+Structure du projet
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Le projet suit une structure organisée par composants et pages, avec un fichier data.json pour la simulation des données dynamiques.
+/src
+│
+├── /assets       # Contient les images (logo, bannières, etc.)
+├── /components   # Composants réutilisables (Collapse, Carrousel, Owner, etc.)
+├── /pages        # Différentes pages de l'application (Home, Rent, About)
+├── /styles       # Fichiers SCSS globaux et modules spécifiques
+├── /api          # Gestion des appels de données (fetch)
+├── /data         # Fichier data.json simulant les données des logements
+└── App.jsx       # Point d'entrée de l'application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Technologies utilisées
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React : Librairie principale utilisée pour construire l'interface utilisateur.
+- React Router : Pour la gestion des routes dynamiques et des paramètres dans l'URL.
+- Sass (SCSS) : Pour la gestion des styles et l'utilisation de modules CSS.
+- PropTypes : Pour la validation des props et la sécurisation des composants.
+- JSDoc : Pour documenter les composants et leurs fonctionnalités.
 
-### `npm run eject`
+Installation et démarrage
+1. Cloner le repository :
+git clone https://github.com/nom-utilisateur/kasa.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Installer les dépendances :
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Lancer l'application :
+npm run start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Gestion des routes
+L'application utilise React Router pour gérer les différentes pages de manière dynamique. Chaque logement est accessible via un ID unique passé dans l'URL (/rent/:id).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Auteur
+Ce projet a été réalisé par Maxime Brunet, dans le cadre de la formation OpenClassrooms - Développeur d'Application JavaScript / React.
