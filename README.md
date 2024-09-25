@@ -50,7 +50,7 @@ Technologies utilisées
 
 Installation et démarrage
 1. Cloner le repository :
-git clone https://github.com/nom-utilisateur/kasa.git
+git clone https://github.com/Maxb06/P11-Kasa.git
 
 2. Installer les dépendances :
 npm install
