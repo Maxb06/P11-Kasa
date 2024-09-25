@@ -8,8 +8,8 @@ import HouseTitle from '../components/HouseTitle/HouseTitle';
 import styles from './styles/RentPage.module.scss'; 
 
 /**
- * La page d'un logement.
- * @return {JSX.Element} Un JSX element qui représente la page d'un logement.
+ * The housing page.
+ * @return {JSX.Element} A JSX element that represents a house page.
  */
 const Rent = () => {
   const { id } = useParams();
